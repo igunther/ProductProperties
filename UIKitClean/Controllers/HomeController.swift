@@ -11,44 +11,25 @@ final class HomeController: UIViewController {
 
     // MARK: - Properties
     
-    lazy var navigateToSecondControllerButton: UIButton = {
+    lazy var productPropertiesButton: UIButton = {
         let button = UIButton(type: .system)
         button.accessibilityIdentifier = "navigateButton"
-        button.addTarget(self, action: #selector(navigateToSecondControllerButtonTapped), for: .touchUpInside)
-        button.setTitle("Navigate to Second Controller", for: .normal)
-        self.view.addSubview(button)
-        return button
-    }()
-    
-    lazy var alertButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.accessibilityIdentifier = "alertButton"
-        button.addTarget(self, action: #selector(alertButtonTapped), for: .touchUpInside)
-        button.setTitle("Alert", for: .normal)
+        button.addTarget(self, action: #selector(productPropertiesButtonTapped), for: .touchUpInside)
+        button.setTitle("Product Properties", for: .normal)
         self.view.addSubview(button)
         return button
     }()
     
     // MARK: - Selectors
     
-    @objc private func alertOkCancelbuttonTapped() {
-        showAlert(title: "Alert Title", message: "A question") { /*[weak self]*/ isOk in
-            
-            if isOk {
-                print("User tapped OK")
-            } else {
-                print("User tapped Cancel")
+    @objc private func productPropertiesButtonTapped() {
+        let productPropertiesController = ProductPropertiesController()
+        
+        self.present(productPropertiesController, animated: true) {
+            if #available(iOS 15.0, *) {
+                
             }
         }
-    }
-    
-    @objc private func alertButtonTapped() {
-        showAlert(title: "Alert Title", message: "Some message")
-    }
-    
-    @objc private func navigateToSecondControllerButtonTapped() {
-        let secondController = SecondController()
-        navigationController?.pushViewController(secondController, animated: true)
     }
     
     // MARK: - Lifecycle
@@ -70,6 +51,7 @@ final class HomeController: UIViewController {
         super.viewDidLoad()
         initSelf()
         initConstraints()
+        productPropertiesButtonTapped()
     }
     
     // MARK: - Helpers
@@ -79,8 +61,7 @@ final class HomeController: UIViewController {
     }
     
     private func initConstraints() {
-        navigateToSecondControllerButton.anchor(top: view.topAnchor, centerX: view.centerXAnchor, paddingTop: 100, width: 300, height: 50)
-        alertButton.anchor(top: navigateToSecondControllerButton.bottomAnchor, centerX: view.centerXAnchor, width: 300, height: 50)
+        productPropertiesButton.anchor(top: view.topAnchor, centerX: view.centerXAnchor, paddingTop: 100, width: 300, height: 50)
     }
 }
 
