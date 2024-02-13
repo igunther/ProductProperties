@@ -14,6 +14,7 @@
 		A81197472A50BA7D00176DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81197452A50BA7D00176DEC /* LaunchScreen.storyboard */; };
 		A811976E2A50D3A300176DEC /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A811976D2A50D3A300176DEC /* SecondController.swift */; };
 		A81197712A50D65200176DEC /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81197702A50D65200176DEC /* +UIView.swift */; };
+		A861AB0C2B7B93C300CBD7C3 /* ProductPropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A861AB0B2B7B93C300CBD7C3 /* ProductPropertiesController.swift */; };
 		A87B04A12A52A519008C25D3 /* +UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B04A02A52A519008C25D3 /* +UIViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		A81197572A50BA7D00176DEC /* ProductPropertiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductPropertiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A811976D2A50D3A300176DEC /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		A81197702A50D65200176DEC /* +UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIView.swift"; sourceTree = "<group>"; };
+		A861AB0B2B7B93C300CBD7C3 /* ProductPropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPropertiesController.swift; sourceTree = "<group>"; };
 		A87B04A02A52A519008C25D3 /* +UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 			children = (
 				A811973E2A50BA7C00176DEC /* HomeController.swift */,
 				A811976D2A50D3A300176DEC /* SecondController.swift */,
+				A861AB0B2B7B93C300CBD7C3 /* ProductPropertiesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A861AB0C2B7B93C300CBD7C3 /* ProductPropertiesController.swift in Sources */,
 				A811973F2A50BA7C00176DEC /* HomeController.swift in Sources */,
 				A81197712A50D65200176DEC /* +UIView.swift in Sources */,
 				A87B04A12A52A519008C25D3 /* +UIViewController.swift in Sources */,
