@@ -36,7 +36,7 @@ final class ProductPropertiesController: UIViewController {
     // MARK: - Helpers
     
     private func initSelf() {
-        
+        view.backgroundColor = .blue
     }
     
     private func initConstraints() {
